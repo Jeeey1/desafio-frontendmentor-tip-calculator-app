@@ -1,0 +1,259 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Space Mono";
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(185, 41%, 84%);
+}
+
+main input {
+  font-family: "Space Mono";
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+  scrollbar-gutter: none;
+  box-sizing: border-box;
+}
+
+/*Remove o scroll do input type="number"*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
+.img-logo {
+  padding-bottom: 70px;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 20px;
+  gap: 40px;
+  padding: 30px;
+  max-width: 800px;
+}
+
+.left-side {
+  padding-left: 10px;
+  position: relative;
+}
+
+.left-side input {
+  padding: 5px 10px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+  border: 2px solid hsl(189, 41%, 97%);
+  outline: none;
+}
+
+.left-side input:hover {
+  border: 1px solid hsl(172, 67%, 45%);
+}
+
+.left-side input:focus {
+  border: 1px solid hsl(172, 67%, 45%);
+}
+
+#numero {
+  margin-bottom: 25px;
+}
+
+.title-bill,
+.title-tip{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.title-bill img,
+.title-tip img {
+  position: absolute;
+  z-index: 1000;
+  top: 13px;
+  left: 10px;
+}
+
+
+.error-input-people {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: red;
+}
+
+.msgError {
+  border: 1px solid red !important;
+}
+
+.input-people {
+  padding-bottom: 5px;
+}
+
+
+.left-side label {
+  font-size: 0.75rem;
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.select-tip-label {
+  font-size: 0.8rem;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  color: hsl(186, 14%, 43%);
+}
+
+
+.options-tip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding-bottom: 35px;
+}
+
+.options-tip li {
+  background-color: hsl(183, 100%, 15%);
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 5px 10px;
+  text-align: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+.options-tip li.currentButton{
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.options-tip li:hover {
+  background-color: hsl(172, 67%, 80%);
+  color: hsl(183, 100%, 15%);
+}
+
+.input-select-tip {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-size: 1.3rem;
+}
+
+/* -------------------------------- */
+
+.right-side {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.right-side h1 {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: hsl(172, 67%, 45%);
+}
+
+.right-side h2 {
+  font-size: 0.7rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.right-side p {
+  font-size: 0.7rem;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.tip-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.right-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-reset {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  margin-top: 100px;
+  letter-spacing: 1px;
+}
+
+.button-reset:hover {
+  background-color: hsl(172, 67%, 80%);
+  color: hsl(183, 100%, 15%);
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    max-width: auto;
+  }
+
+   .options-tip{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .right-side h1{
+    font-size: 2rem;
+  }
+
+  input#numero,
+  input#pessoas{
+    font-size: 1.5rem;
+  }
+
+  .button-reset{
+    margin-top: 20px;
+  }
+
+}

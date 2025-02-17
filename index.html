@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <img src="images/logo.svg" alt="Logo 'Splitter'" class="img-logo">
+  <main class="container">
+    <div class="left-side">
+      <label for="numero">Bill
+      </label>
+      <div class="title-bill">
+        <img src="images/icon-dollar.svg" alt="">
+        <input type="number" name="numero" id="numero">
+      </div>
+      <label class="select-tip-label">Select Tip %</label>
+      <ul class="options-tip">
+        <li href="#">5%</li>
+        <li href="#">10%</li>
+        <li href="#">15%</li>
+        <li href="#">25%</li>
+        <li href="#">50%</li>
+        <input type="number" placeholder="Custom" class="input-select-tip">
+      </ul>
+      <div class="error-input-people">
+        <label for="pessoas"  class="input-people">Number of People
+        </label>
+        <p></p>
+      </div>
+      <div class="title-tip">
+        <img src="images/icon-person.svg" alt="">
+        <input type="Number" name="pessoas" id="pessoas">
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="tip-amount">
+        <div class="text-amount">
+          <h2>Tip Amount</h2>
+          <p>/ person</p>
+        </div>
+        <h1 class="value-tip-amount">$0.00</h1>
+      </div>
+      <div class="right-total">
+        <div class="text-total">
+          <h2>Total</h2>
+          <p>/ person</p>
+        </div>
+        <h1 class="value-total">$0.00</h1>
+      </div>
+      <a href="#" class="button-reset">Reset</a>
+    </div>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
